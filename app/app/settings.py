@@ -25,7 +25,7 @@ SECRET_KEY = '8&9i)uo7&)hs41204qa1r$0(*yb$^li9utdv3&zzqy16icj01^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # If this project is in debug mode and running on SourceLair, then add
 # `localhost` and its Public URL in the allowed hosts.
@@ -36,6 +36,7 @@ if DEBUG and os.getenv('SL_PUBLIC_URL'):
 # Application definition
 
 INSTALLED_APPS = [
+    'movies.apps.MoviesConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
