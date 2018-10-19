@@ -34,23 +34,22 @@
       	<div class="container">
           <div class="movies">
             {% for movie in search_result %}
-            <div class="movies__item">
-              <i class="movies__item-star fa fa-star hide"></i>
-              <p class="movies__item-rating hide">{{ movie.fields.Rating }}/10</p>
-            	<img class="movies__item-image" src="{{ movie.fields.Pictures.0.url }}" alt="" />
-              <div class="movies__item-title">
-								<p>{{ movie.fields.Name }}</p>
-              </div>
-            </div>
-
+            	<div class="movies__item">
+              	<i class="movies__item-star fa fa-star hide"></i>
+              	<p class="movies__item-rating hide">{{ movie.fields.Rating }}/10</p>
+            		<img class="movies__item-image" src="{{ movie.fields.Pictures.0.url }}" alt="" />
+              	<div class="movies__item-title">
+									<p>{{ movie.fields.Name }}</p>
+              	</div>
+            	</div>
             {% endfor %}
           </div>
-
       	</div>
       </section>
     </div>
 
-    <!-- JAVASCRIPTS -->
+    <!-- Optional Javascripts -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
